@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Car Sharing{% endblock %}
+{% block content %}
+
+      <div class="container">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="/index/">Home <i class="ion-ios-arrow-forward"></i></a></span>
+                <span>Car details <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread">Car Details</h1>
+      </div>
+
+		<section class="ftco-section ftco-car-details">
+      <div class="container">
+      	<div class="row justify-content-center">
+      		<div class="col-md-12">
+      			<div class="car-details">
+                    {% for borrow in BorrowCar_Id %}
+                        <center><img class="img-fluid" src="../{{borrow.CarImage}}"></img></center>
+      				<div class="text text-center">
+      					<h2>{{borrow.Car_Name}}</h2>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      	<div class="row">
+      		<div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+              	<div class="d-flex mb-3 align-items-center">
+	              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-dashboard"></span></div>
+	              	<div class="text">
+		                <h3 class="heading mb-0 pl-3">
+		                	Mileage
+		                	<span>40,000</span>
+		                </h3>
+	                </div>
+                </div>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+              	<div class="d-flex mb-3 align-items-center">
+	              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-pistons"></span></div>
+	              	<div class="text">
+		                <h3 class="heading mb-0 pl-3">
+		                	Transmission
+		                	<span>Manual</span>
+		                </h3>
+	                </div>
+                </div>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+              	<div class="d-flex mb-3 align-items-center">
+	              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-car-seat"></span></div>
+	              	<div class="text">
+		                <h3 class="heading mb-0 pl-3">
+		                	Seats
+		                	<span>2-4 Adults</span>
+		                </h3>
+	                </div>
+                </div>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+              	<div class="d-flex mb-3 align-items-center">
+	              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-backpack"></span></div>
+	              	<div class="text">
+		                <h3 class="heading mb-0 pl-3">
+		                	Luggage
+		                	<span>4 Bags</span>
+		                </h3>
+	                </div>
+                </div>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services">
+              <div class="media-body py-md-4">
+              	<div class="d-flex mb-3 align-items-center">
+	              	<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-diesel"></span></div>
+	              	<div class="text">
+		                <h3 class="heading mb-0 pl-3">
+		                	Fuel
+		                	<span>Petrol</span>
+		                </h3>
+	                </div>
+                </div>
+              </div>
+            </div>      
+          </div>
+      	</div>
+      	<div class="row">
+      		<div class="col-md-12 pills">
+						<div class="bd-example bd-example-tabs">
+							<div class="d-flex justify-content-center">
+							  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+							    <li class="nav-item">
+							      <a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true">Features</a>
+							    </li>
+							    <li class="nav-item">
+							      <a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Description</a>
+							    </li>
+							  </ul>
+							</div>
+
+						  <div class="tab-content" id="pills-tabContent">
+						    <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
+						    	<div class="row">
+						    		<div class="col-md-4">
+						    			<ul class="features">
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Airconditions</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Child Seat</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>GPS</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Luggage</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Music</li>
+						    			</ul>
+						    		</div>
+						    		<div class="col-md-4">
+						    			<ul class="features">
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Seat Belt</li>
+						    				<li class="remove"><span class="ion-ios-close"></span>Sleeping Bed</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Water</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Bluetooth</li>
+						    				<li class="remove"><span class="ion-ios-close"></span>Onboard computer</li>
+						    			</ul>
+						    		</div>
+						    		<div class="col-md-4">
+						    			<ul class="features">
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Audio input</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Long Term Trips</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Car Kit</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Remote central locking</li>
+						    				<li class="check"><span class="ion-ios-checkmark"></span>Climate control</li>
+						    			</ul>
+						    		</div>
+						    	</div>
+						    </div>
+
+						    <div class="tab-pane fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
+						      <p>{{borrow.Car_Description}}</p>
+						    </div>
+						  </div>
+						</div>
+		      </div>
+				</div>
+      </div>
+        {% endfor %}
+    </section>
+
+<section class="ftco-section ftco-car-details">
+      <div class="container">
+    <div id="Bookmodal" class="Bookmodal">
+
+                    <!-- Modal content -->
+                    <div class="Bookmodal-content">
+                        <h2>Booking</h2>
+                         <form action="" class="bg-light p-5 contact-form" method="POST" enctype="multipart/form-data">
+                         {% csrf_token %}
+                                <div class="form-group">UserName: <input class="form-control" value="{{ user.username }}" Required name="username"></div>
+
+                                <div class="form-group">
+                                    <div class="form-group"><label for="tel">Phone Number</label>
+                                        <div class="form-group"><input maxlength="8" Required name="phone" type="tel" id="tel" class="form-control" value=""> </div>
+                                        <label for="email">User Email: </label><input class="form-control" value="{{ user.email }}" Required name="email"></div>
+                                </div>
+                            <div class="form-group"><span class="label other">What time do you want to make a booking?</span></div>
+                              <div class="form-group">
+			    					<label for="" class="label">Pick-up location</label>
+			    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc" Required name="pickup_location">
+			    				</div>
+			    				<div class="form-group">
+			    					<label for="" class="label">Drop-off location</label>
+			    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc" Required name="dropoff_location">
+			    				</div>
+			    				<div class="d-flex">
+			    					<div class="form-group mr-2">
+			                <label for="" class="label">Pick-up date</label>
+			                <input type="date" class="form-control"  placeholder="Date" Required name="pickup_date">
+			              </div>
+			              <div class="form-group ml-2">
+			                <label for="" class="label">Drop-off date</label>
+			                <input type="date" class="form-control"  placeholder="Date" Required name="dropoff_date">
+			              </div>
+		              </div>
+		              <div class="form-group">
+		                <label for="" class="label">Pick-up time</label>
+		                <input type="time" class="form-control" placeholder="Time" Required name="pickup_time">
+
+		              </div>
+                                        <div class="form-group"><label for="date"><span class="label other">Remarks</span></label>
+                                            <div class="form-group">
+                                                <div class="form-group"><textarea class="form-control" Required name="remarks"></textarea></div>
+                                            </div>
+                                        </div>
+
+                                <div class="form-group">
+                                    <div class="form-group"><span class="label other">Personal Information Collection Statement</span></div>
+                                    <p class="form-group">
+                                        The company intends to use your personal name, phone number,or email address to process your application, respond to your enquiries and promote real estate agency services. The company cannot use your
+                                        personal data and make direct marketing to you without your consent.</p>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label><input type="checkbox" value="" checked=""><span><span >I have checked your company’s <a href="#"> Privacy policy </a> and <a href="#"> Disclaimer </a>，And agree that your company uses the personal information I fill in here for direct marketing。</span></span>
+                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                <label for="" class="form-label">Rent number</label>
+                                <input type="text" Required name="rent_number" class="form-control">
+                            </div>
+                                    <div class="form-group"><button type="submit" class="btn btn-primary mb-2">Booking Now</button></div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+    </nav>
+      </div>
+</section>
+   {% endblock %}

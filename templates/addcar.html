@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Car Sharing{% endblock %}
+{% block content %}
+<style>
+    img{
+        height: 200px;
+        width: 200px;
+    }
+    body {
+  font-family: sans-serif;
+}
+</style>
+
+    <section class="section">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="fw-bold">Add Product</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="" class="form-label">User Name</label>
+                                <input type="text" Required name="username" class="form-control" value="{{ user.username }}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">User Email</label>
+                                <input type="text" Required name="email" class="form-control" value="{{ user.email }}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Car ID</label>
+                                <input type="text" Required name="Car_Id" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Car Name</label>
+                                <input type="text" Required name="Car_Name" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Car Description</label>
+                                <input type="text" Required name="Car_Description" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Car Rental Price</label>
+                                <input type="text" Required name="Car_Rental_Price" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Car Image</label>
+                                <input type="file" Required name="CarImage" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+
+ {% endblock %}

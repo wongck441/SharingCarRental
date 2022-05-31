@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Car Sharing{% endblock %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static 'images/bg_1.jpg'%}');" data-stellar-background-ratio="0.5">
+<br><br><br>
+    <div class="container">
+<div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5">
+                     </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card2 card border-0 px-4 py-4">
+                <div class="container">
+                    <h1>User Profile</h1>
+                    <h4>UserName: {{ user.username }}</h4>
+                    <h4>User Email: {{ user.email }}</h4>
+                </div>
+                </div>
+            </div>
+</div>
+</div>
+</section>
+
+   {% endblock %}
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Car Sharing{% endblock %}
+{% block content %}
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static 'images/bg_3.jpg'%}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
+          <div class="col-md-9 ftco-animate pb-5">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="/index/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Cars <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread">Choose Your Car</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container my-4">
+	<div class="row">
+		<div class="col-md-9">
+			<!-- Products -->
+			<h3 class="mb-4 border-bottom pb-1">
+				Borrow Cars
+			</h3>
+			<div class="row" id="filteredProducts">
+				{% for borrow in BorrowCarstable %}
+				<div class="col-lg-4 col-md-6 mb-4 product-box">
+					<div class="card shadow">
+
+					  <div class="card-body">
+                          <h6>Car ID: {{ borrow.Car_Id }}</h6>
+                          <h6>Username: {{ borrow.username }}</h6>
+                        <h6>Email: {{ borrow.email }}</h6>
+
+                          <br>
+                          <h6>Car Name: <p>{{borrow.Car_Name}}</p></h6>
+					    <h6>Car Description: <p>{{borrow.Car_Description}}</p></h6>
+                          <br>
+                          <h6>Car Rental Price: <p>{{ borrow.Car_Rental_Price }}</p></h6>
+                          <h6><img src="../{{borrow.CarImage}}" style="width:220px;height:220px;"></img></h6>
+                          <h6>Car Borrow Created Date: <p>{{ borrow.Car_borrow_created }}</p></h6>
+
+					  </div>
+					  	<div class="card-footer">
+                            <a href="/car-single/?Car_Id={{ borrow.Car_Id }}" class="btn btn-sm btn-primary add-to-cart"><i class="fa fa-shopping-cart"> Booking</i></a>
+							  	<span class="float-right">
+							  		<span>rated:</span>4.5/5
+							  		<i class="fa fa-star text-warning"></i>
+							  	</span>
+					  	</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</main>
+ {% endblock %}
